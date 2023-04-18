@@ -5,13 +5,14 @@ click = 0
 amount = 1
 cost1 = 50
 
-amt_cash = 10000
-amt_ira = 0
-amt_bonds = 0
-amt_stocks = 0
-amt_roth = 0
-amt_401k = 0
-amt_403b = 0
+cash = 10000
+health = 100
+happiness = 100
+
+age = 25
+retirementAge = 65
+savings = 0
+savingsGoal = 1000000
 
 morgage = False
 car = False
@@ -21,8 +22,6 @@ married = False
 
 rent_cost = 0
 morgage_cost = 0
-utilities_cost = 0
-food_costs = 0
 car_cost = 0
 student_loan_cost = 0
 credit_card_cost = 0
@@ -31,12 +30,12 @@ num_kids = 0
 
 #--------------------- Window Defn -------------------------
 window = Tk()
-window.title("Clicker game")
-window.geometry('800x600')
+window.title("Money v Happy")
+window.geometry('1200x900')
 
 background_image = PhotoImage(file="hillandale.png")
 background_label = Label(window, image=background_image)
-background_label.place(x=160, y=0, relwidth=0.6, relheight=1)
+background_label.place(x=475, y=175, relwidth=0.5, relheight=0.5)
 
 
 #----------------- Functions -------------------
@@ -63,72 +62,62 @@ def clicked():
   click += amount
   lbl.configure(text=click)
 
-def buy1():    
-  global amount    
-  global click    
-  global cost1    
-  if click >= cost1:    
-    click = click - cost1    
-    amount = amount + 1    
-    cost1 = round(cost1*1.15)   
-    milk_man.configure(text="$"+str(cost1))
-    lbl.configure(text=click)
 
-#--------------- Current You ---------------------
+
+#--------------- Header Bar ---------------------
 lbl = Label(window, text="0")
 lbl.place(x=10, y=10)
 
 current = PhotoImage(file='current.png')
-current.configure(width=100, height=100)
+current.configure(width=120, height=120)
 btn = Button(window, image=current, command=clicked)
-btn.place(x=10, y=30)
+btn.place(x=525, y=0)
 
 cashLabel = Label(window, text="Cash")
-cashLabel.place(x=10, y=150)
-cashButton = Button(window, text="$"+str(amt_cash), command=buy1)
-cashButton.place(x=10, y=170)
+cashLabel.place(x=150, y=100)
+cashButton = Button(window, text="$"+str(cash), command=clicked)
+cashButton.place(x=225, y=100)
 
-rentLabel = Label(window, text="Rent")
-rentLabel.place(x=10, y=200)
-rent_amt = Label(window, text="$"+str(rent_cost))
-rent_amt.place(x=10, y=220)
+happinessLabel = Label(window, text="Happiness")
+happinessLabel.place(x=50, y=25)
+happinessBar = ttk.Progressbar(window, orient=HORIZONTAL, length=200, mode='determinate')
+happinessBar.place(x=50, y=50)
+happinessBar['value'] = happiness
+happinessBar['maximum'] = 100
+happinessBar['variable'] = happiness
 
-foodLabel = Label(window, text="Food Costs")
-foodLabel.place(x=10, y=250)
-food_amt = Label(window, text="$"+str(food_costs))
-food_amt.place(x=10, y=270)
+healthLabel = Label(window, text="Health")
+healthLabel.place(x=275, y=25)
+healthBar = ttk.Progressbar(window, orient=HORIZONTAL, length=200, mode='determinate')
+healthBar.place(x=275, y=50)
+healthBar['value'] = health
+healthBar['maximum'] = 100
+healthBar['variable'] = health
 
-ttk.Separator(window, orient=VERTICAL).place(x=150, y=0, height=500)
+savingsLabel = Label(window, text="Savings")
+savingsLabel.place(x=700, y=25)
+savingsBar = ttk.Progressbar(window, orient=HORIZONTAL, length=200, mode='determinate')
+savingsBar.place(x=700, y=50)
+savingsBar['value'] = savings
+savingsBar['maximum'] = savingsGoal
+savingsBar['variable'] = savings
+
+ageLabel = Label(window, text="Age")
+ageLabel.place(x=950, y=25)
+ageBar = ttk.Progressbar(window, orient=HORIZONTAL, length=200, mode='determinate')
+ageBar.place(x=950, y=50)
+ageBar['value'] = age
+ageBar['maximum'] = retirementAge
+ageBar['variable'] = age
+
+#------------------------------------
+
+
+ttk.Separator(window, orient=HORIZONTAL).place(x=0, y=150, width=1200)
 #------------------------------------
 
 #Game Space
 
-#----------------- Future You -------------------
-ttk.Separator(window, orient=VERTICAL).place(x=650, y=0, height=500)
 
-lbl2 = Label(window, text="0")
-lbl2.place(x=680, y=10)
-
-future = PhotoImage(file='future.png')
-future.configure(width=100, height=100)
-btn = Button(window, image=future, command=clicked)
-btn.place(x=680, y=30)
-
-bondLabel = Label(window, text="Bonds")
-bondLabel.place(x=680, y=150)
-bondVal = Label(window, text="$"+str(amt_bonds))
-bondVal.place(x=680, y=170)
-
-stockLabel = Label(window, text="Stocks")
-stockLabel.place(x=680, y=200)
-stockVal = Label(window, text="$"+str(amt_stocks))
-stockVal.place(x=680, y=220)
-
-iraLabel = Label(window, text="IRA")
-iraLabel.place(x=680, y=250)
-iraVal = Label(window, text="$"+str(amt_ira))
-iraVal.place(x=680, y=270)
-
-#--------------------------------------------
 
 window.mainloop()
