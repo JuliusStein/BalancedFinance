@@ -14,7 +14,7 @@ happiness = 100
 age = 25
 retirementAge = 65
 savings = 0
-savingsGoal = 1000000
+savingsGoal = 100
 
 morgage = False
 car = False
@@ -56,20 +56,71 @@ def updateCard():
   cardImageLabel.place(x=450, y=225)
 
 def applyCard(card, side):
-  if side == "LEFT":
-    return
-  elif side == "RIGHT":
-    return
+  global cashLabel, cashButton, happinessLabel, happinessBar, healthLabel, healthBar, ageLabel, ageBar, savingsLabel, savingsBar, savingsGoalLabel, savingsGoalBar
+  global cash, health, happiness, age, retirementAge, savings, savingsGoal, morgage, car, student_loan, credit_card, married, rent_cost, morgage_cost, car_cost, student_loan_cost, credit_card_cost, num_kids
 
+  if side == "LEFT":
+    cash += card.leftCost
+    happiness += card.leftHappiness
+    health += card.leftHealth
+    savings += card.leftSavings
+  elif side == "RIGHT":
+    cash += card.rightCost
+    happiness += card.rightHappiness
+    health += card.rightHealth
+    savings += card.rightSavings
+  
+  if happiness > 100:
+    happiness = 100
+  if health > 100:
+    health = 100
+
+  cashButton.configure(text="$" + str(cash))
+  happinessBar.configure(value=happiness)
+  healthBar.configure(value=health)
+  savingsGoalBar.configure(value=savings)
+  savingsGoalBar.configure(maximum=savingsGoal)
+  
+def nextYear():
+  global age, ageBar, ageLabel, ageNumberLabel, bear, bearButton
+  age += 1
+  ageNumberLabel.configure(text=str(age))
+  ageBar.configure(value=age)
+  ageBar.configure(maximum=retirementAge)
+  if age >= retirementAge:
+    ageLabel.configure(text="Retired")
+    ageBar.configure(value=retirementAge)
+    ageBar.configure(maximum=retirementAge)
+
+  #Update Bear
+  satisfaction = (happiness + health) / 2
+
+  if satisfaction >= 95:
+    bear = resizeImage("assets/bear_thriving_150X150.png", 125, 125)
+  elif satisfaction >= 80:
+    bear = resizeImage("assets/bear_happy_150X150.png", 125, 125)
+  elif satisfaction >= 65:
+    bear = resizeImage("assets/bear_comfortable_150X150.png", 125, 125)
+  elif satisfaction >= 50:
+    bear = resizeImage("assets/bear_neutral_150X150.png", 125, 125)
+  elif satisfaction >= 35:
+    bear = resizeImage("assets/bear_warning_150X150.png", 125, 125)
+  else:
+    bear = resizeImage("assets/bear_warning_150X150.png", 125, 125)
+
+  bearButton.configure(image=bear)           
+    
 def clickedLeft():
   global currentCard
   updateCard()
   applyCard(currentCard, "LEFT")
+  nextYear()
 
 def clickedRight():
   global currentCard
   updateCard()
   applyCard(currentCard, "RIGHT")
+  nextYear()
 
 #----------------- Window -------------------
 global window
@@ -189,9 +240,9 @@ cardRightButton.place(x=900, y=450)
 
 global deck
 deck = playerDeck
-card = deck.drawCard()
 
 draw()
+updateCard()
 
 window.mainloop()
 
