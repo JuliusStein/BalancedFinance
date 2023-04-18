@@ -2,6 +2,7 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
+from cards import Card, Deck, playerDeck, addRelationshipCards
 
 #----------------- Variables -------------------
 click = 0
@@ -38,7 +39,7 @@ def resizeImage(file, width, height):
   return img
 
 from random import randint
-def rollCard():
+def draw():
   roll = randint(1, 5)
   if roll <= 1:
     print("You got a good card!")
@@ -52,7 +53,7 @@ def rollCard():
     print("You got a bad card!") 
 
 def clicked():
-  rollCard()
+  draw()
 
   global click
   global amount
@@ -175,5 +176,9 @@ cardRightButton.place(x=900, y=450)
 #------------------------------------
 
 cardText.configure(text="This is the card text "*30)
+
+deck = playerDeck
+card = deck.drawCard()
+print(card.category)
 
 window.mainloop()
