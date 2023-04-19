@@ -43,7 +43,19 @@ def draw():
   playerDeck.shuffle()
   card = playerDeck.drawCard()
   return card
-  
+
+def homeScreen():
+  pass
+
+def surveyScreen():
+  pass
+
+def startGame():
+  pass
+
+def endGame():
+  pass
+
 global currentCard
 def updateCard():
   global window, cardText, cardImage, cardImageLabel, currentCard, leftText, rightText
@@ -91,6 +103,12 @@ def nextYear():
     ageLabel.configure(text="Retired")
     ageBar.configure(value=retirementAge)
     ageBar.configure(maximum=retirementAge)
+
+  #TODO: Passive Income and Passive Debts?
+
+
+  #TODO: Passive Savings deposit from income?
+
 
   #Update Bear
   satisfaction = (happiness + health) / 2
@@ -197,7 +215,7 @@ backgroundLabel = Label(window, image=backgroundImage)
 backgroundLabel.place(x=0, y=150)
 
 #Card Outline
-img = resizeImage('assets/blankCard.png',370, 550)
+img = resizeImage('assets/blankCard.png',385, 560)
 cardOutlineLabel = Label(window, image=img, bg='#565040')
 cardOutlineLabel.place(x=425, y=200)
 
@@ -209,7 +227,7 @@ cardImageLabel.place(x=450, y=225)
 
 #Card Text
 global cardText
-cardText = Label(window, text="This is the card text", bg='#565040', fg='white', font=("Arial", 10), wraplength=300, justify=CENTER)
+cardText = Label(window, text="This is the card text", bg='#565040', fg='white', font=("Arial", 12), wraplength=300, justify=CENTER)
 cardText.place(x=470, y=500)
 
 #Left Text
@@ -240,6 +258,9 @@ cardRightButton.place(x=900, y=450)
 
 global deck
 deck = playerDeck
+
+homeScreen()
+survey()
 
 draw()
 updateCard()

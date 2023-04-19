@@ -1,11 +1,44 @@
 import random
 global playerDeck
 
+def getImageByCategory(category):
+    if category == "Work":
+        return "assets/cardImages/newJob.png"
+    elif category == "Education":
+        #return "assets/cardImages/education.png"
+        return "assets/cardImages/defaultCardImage.png"
+    elif category == "Happiness":
+        return "assets/cardImages/raise.png"
+        #return "assets/cardImages/defaultCardImage.png"
+    elif category == "Health":
+        #return "assets/cardImages/health.png"
+        return "assets/cardImages/defaultCardImage.png"
+    elif category == "Travel":
+        #return "assets/cardImages/travel.png"
+        return "assets/cardImages/defaultCardImage.png"
+    elif category == "Investment":
+        return "assets/cardImages/spendOrInvest.png"
+        #return "assets/cardImages/defaultCardImage.png"
+    elif category == "Social":
+        return "assets/cardImages/joinOrNo.png"
+        #return "assets/cardImages/defaultCardImage.png"
+    elif category == "Housing":
+        return "assets/cardImages/newJob.png"
+        #return "assets/cardImages/defaultCardImage.png"
+    elif category == "Unexpected":
+        return "assets/cardImages/payCut.png"
+        #return "assets/cardImages/defaultCardImage.png"
+    elif category == "Relationship":
+        #return "assets/cardImages/relationship.png"
+        return "assets/cardImages/defaultCardImage.png"
+    else:
+        return "assets/cardImages/defaultCardImage.png"
+    
 class Card:
     def __init__(self, cardCategory, cardDescription, leftText = "Left", rightText = "Right", 
                  cardImage = "assets\cardImages\defaultCardImage.png",
-                 leftCost=0, rightCost=0,leftHappiness=0,rightHappiness=0, 
-                 leftHealth=0, rightHealth=0, leftSavings=0, rightSavings=0):
+                 leftHappiness=0, leftHealth=0,leftCost=0,leftSavings=0, 
+                 rightHappiness=0, rightHealth=0, rightCost=0, rightSavings=0):
         
         self.image = cardImage
         self.description = cardDescription
@@ -52,7 +85,10 @@ class Deck:
             line_count = 0
             for row in csv_reader:
                 if line_count != 0:
-                    card = Card(row[0], row[1], row[2], row[3], "assets\cardImages\defaultCardImage.png", float(row[4]), float(row[5]), float(row[6]), float(row[7]), float(row[8]), float(row[9]), float(row[10]), float(row[11]))
+                    #cleaning up the data
+                    row[1] = ''.join([i for i in row[1] if (i.isalnum() or i == ' ' or i == '.'or i=='!' or i=='?')])
+                    #Create and add card
+                    card = Card(row[0], row[1], row[2], row[3], getImageByCategory(row[0]), float(row[4]), float(row[5]), float(row[6]), float(row[7]), float(row[8]), float(row[9]), float(row[10]), float(row[11]))
                     playerDeck.addCard(card)
                 line_count += 1
 
