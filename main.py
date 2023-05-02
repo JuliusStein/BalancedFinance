@@ -47,7 +47,7 @@ def draw():
 def homeScreen():
   pass
 
-def surveyScreen():
+def survey():
   pass
 
 def startGame():
@@ -148,7 +148,7 @@ window.geometry('1200x900')
 #window.wm_attributes('-transparentcolor','grey')
 
 #--------------- Header Bar ---------------------
-headerImage = resizeImage('assets/header_1200x150.png', 1200, 150)
+headerImage = resizeImage('assets/header_1200X150.png', 1200, 150)
 lbl = Label(window, text="", image=headerImage)
 lbl.place(x=0, y=0)
 
@@ -210,7 +210,7 @@ ttk.Separator(window, orient=HORIZONTAL).place(x=0, y=150, width=1200)
 
 #------------- Game Space -----------------------
 #Background
-backgroundImage = resizeImage('assets/background_1200x750.png', 1200, 750)
+backgroundImage = resizeImage('assets/background_1200X750.png', 1200, 750)
 backgroundLabel = Label(window, image=backgroundImage)
 backgroundLabel.place(x=0, y=150)
 

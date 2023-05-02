@@ -97,4 +97,5 @@ class Deck:
 
         
 playerDeck = Deck("Main Deck")
-playerDeck.loadCards('cards_v1.csv')
+#playerDeck.loadCards('cards_v1.csv')
+playerDeck.loadCards('cards_v2.csv')

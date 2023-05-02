@@ -1,0 +1,196 @@
+Category,Prompt,Choice 1,Choice 2,C1 V1 (Happiness) Effect,C1 V2 (Health) Effect,C1 V3 (Extra Cash) Effect,C1 V4 (Savings) Effect,C2 V1 (Happiness) Effect,C2 V2 (Health) Effect,C2 V3 (Extra Cash) Effect,C2 V4 (Savings) Effect
+Work,Your job is doing cost cuts. Your job is safe but you have to decide to take a pay decrease or lose health benefits. What do you choose (for now)?,Health Risk,Pay Cut,-10.00,-10.00,100.00,0.00,-10.00,10.00,-100.00,0.00
+Work,You are asked to join a union. Doing so gives you health insurance and contributes to your retirement but costs union dues.,Don't Join.,Join!,0.00,-10.00,0.00,500.00,0.00,10.00,-250.00,1500
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500
+Work,Your coworker gets a promotion over you! You can look for another job but that'll be a lot of work.,Stay Put,Look for work.,0.00,0.00,0.00,0.00,10.00,-10.00,0.00,0.00
+Work,You’re offered a promotion at work. You’ll earn a higher salary but your work responsibilities will increase. Accept or Not?,Decline,Accept,0.00,10.00,0.00,0.00,-10.00,-10.00,250.00,2500
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,10.00,0.00,0.00,0.00,-10.00,0.00,150.00,0.00
+Work,You are offered to work from home! You'll spend less money commuting but won't get much social interaction.,Stay in Office,WFH,10.00,0.00,-100.00,0.00,-10.00,0.00,100.00,0.00
+Work,You get offered a position at another company making more than you do now. The job is in another city with the same cost of living but you'll have to move.,Stay Put,Move,0.00,0.00,0.00,0.00,-10.00,-10.00,-200.00,2500
+Work,Your company downsizes and you get laid off work. While you're looking for a new job you'll need some cash to stay afloat. Where are you getting the money?,Cash,Savings,-10.00,0.00,-350.00,0.00,-10.00,0.00,0.00,-3500
+Work,Your company gives you a career recognition reward for your years of dedicated service! Where do you put the money?,Cash,Savings,10.00,0.00,350.00,0.00,10.00,0.00,0.00,3500
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-100.00,0.00
+Health,It's allergy season! A-10choo!! Do you pick up some allergy medicine or suffer the sniffles?,Medicine,Sniffles,0.00,10.00,-100.00,0.00,0.00,-10.00,0.00,0.00
+Health,You've been working really hard and deserve some rest. How do you want to use your wellness bonus?,Happiness,Health,10.00,0.00,0.00,0.00,0.00,10.00,0.00,0.00
+Health,You've been getting straining headaches at work and suspect you might need glasses. Do you go get your eyes checked and pay the fee or let your health suffer?,Doctor,Squint,0.00,10.00,-500.00,0.00,0.00,-20.00,0.00,0.00
+Health,You haven't been feeling very well lately do you want to take some time off work to rest and restore health or keep working?,Work,Rest,-10.00,-10.00,250.00,500.00,10.00,10.00,0.00,0.00
+Health,Seems like you've been feeling a bit low lately. Do you want to invest in therapy to support your happiness and health?,No,Yes,-15.00,-15.00,0.00,0.00,5.00,15.00,-250.00,0.00
+Health,You've been doing really good in therapy lately! Stay in it for a happiness boost choose to stop sessions and invest the cash.,Cash,Therapy,-10.00,-10.00,0.00,2500,10.00,10.00,-250.00,0.00
+Health,Your appendix burst and you were taken to the hospital. You're okay! But you need to pay some extra medical bills now. Can you pay them all off now or set up a payment plan?,Payment Plan,Pay Off Now,-10.00,-10.00,0.00,-1500.00,-10.00,-10.00,-150.00,0.00
+Health,Health retreat!! You could pay to go a wellness retreat to rest and pamper yourself.,Stay Home,Wellness Trip,-10.00,-5.00,0.00,0.00,15.00,10.00,-250.00,0.00
+Health,You broke your foot trying out the latest dance trend. Surgery is expensive! Where are you getting the money?,Cash,Savings,-10.00,-10.00,-250.00,0.00,-10.00,-10.00,0.00,-2500.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,You got invited to your friend's birthday party! When your friend is happy you're happy!,Just go party!,Get a gift!,10.00,0.00,0.00,0.00,20.00,0.00,-100.00,0.00
+Social,Your friends are in town and asked you to host them! Seeing them will make you feel better but you'll have to pay a little extra to entertain them.,Decline.,Invite them!,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,You really want to take up a new club hobby in your neighborhood to meet new people but there is a fee to join.,Don't Join.,Join,-10.00,-10.00,100.00,0.00,10.00,10.00,-200.00,0.00
+Social,You're hosting a dinner party for friends and need to pick up a few things to prepare. Splurge on the dinner or cut costs?,Splurge,Skrimp,20.00,0.00,-250.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your favorite artist is performing in your city! But tickets are $200. Do you go?,No,Go,-10.00,0.00,0.00,0.00,15.00,0.00,-200.00,0.00
+Social,It's a special occasion and you want to celebrate.,Get a gift,Nice dinner,20.00,0.00,-100.00,0.00,10.00,10.00,-100.00,0.00
+Social,Someone close to you is getting married! They asked you to be in the wedding party (that can be really fun but comes with a lot of expenses).,Decline,Accept,-15.00,0.00,100.00,0.00,15.00,0.00,-300.00,0.00
+Social,Your friends are planning a weekend trip. You'll need to plan for travel lodging and food expenses but it's only for a couple of days. Do you want to go?,No,Yes,-10,0,0,0,10,0,-150,0
+Social,Spending more time with loved ones in community would be a huge boost to your happiness and wellness but social activity and travel costs money.,Solo Time,Family Time,-10,-10,0,1000,10,10,-150,-1000
+Housing,You're looking for housing. What's more important to you?,Being Happy,Saving Money,25,0,-250,-2500,-10,0,100,1000
+Housing,You're moving out! Do you want to find a roommate? You'll give up some personal freedom but save money!,Roommate,Live Alone.,-10,0,150,0,10,0,-150,0
+Housing,You found a place with cheaper rent! You'll have to leave your neighborhood but you'll be paying less money.,Stay,Move,15,0,0,0,-20,0,500,0
+Housing,Moving out day! You get your full security deposit back. Where do you put the money?,Cash,Savings,0,0,150,0,0,0,0,1500
+Housing,You had some bad weather at your house and now your roof is leaking. Do you have the money to fix it now or do you have to wait and hope it doesn't get worse?,Wait,Fix Now,-10,-10,0,0,10,10,-200,0
+Housing,Rent Spike! Your landlord raised the rent. Where are you going to get the money?,Cash,Savings,-10,0,-500,0,-10,0,0,-5000
+Housing,You've been renting apartments for years now. Do you want to try and buy a home? ,Rent,Buy Home,0,0,0,-10000,0,0,-1000,0
+Housing,You received a tax refund and want to make your house a home. Do you want to decorate/renovate to boost your happiness or put extra cash in your savings?,Renovate,Invest,10,0,0,-1000,-10,0,0,1000
+Housing,The leak in your roof caused some damage and now you have to have big repairs done. Where do you get the money?,Cash,Savings,-10,0,-250,0,-10,0,0,-2500
+Housing,Congratulations after consistently making biweekly payments to reduce the interest costs You pay off your mortgage! Where do you want to keep a new increase in income?,Cash,Invest,10,0,250,0,10,0,0,2500
+Relationship,Are you interested in pursuing romantic partners?,No,Yes,0,0,0,0,0,0,0,0
+Relationship,You've met someone you like and you would like to get to know them better. Do you go out on a date?,No,Yes,-10,0,100,0,10,0,-100,0
+Relationship,Things are going well with the person you've been seeing. Do you want to continue going out on dates?,No,Yes,-10,0,150,0,10,0,-150,0
+Relationship,It is a gift giving holiday/special occasion. Do you and your partner agree to exhange gifts?,No,Yes,-10,0,100,0,10,0,-100,0
+Relationship,Are you interested in cohabitation with romantic partner(s)?,No,Yes,0,0,0,0,0,0,0,0
+Relationship,You have been seeing someone for a while now and they ask you to move in with them. This could be a happiness boost and let you split living expenses. Do you move in together?,No,Yes,0,0,-10,0,10,0,10,0
+Relationship,Are you interested in marriage?,No,Yes,0,0,10,0,0,0,10,0
+Relationship,Are you interested in raising children?,No,Yes,0,10,250,2500,20,-10,-250,-2500
+Relationship,You are interested in getting married. Would you prefer to host a ceremony and reception or elope?,Elope,Ceremony,-25,0,0,2000,25,0,-500,
+Relationship,You've gotten married and it is time to file your taxes. Do you file together or separately?,Separate,Together,0,0,150,0,0,0,0,1500
+Unexpected,You get a flat tire. Do you pay to have your tire changed or do you try and fix it yourself?,Pay,Change it Self,10,0,-100,0,-15,-10,0,0
+Unexpected,"Someone you went to high school with reaches out to you with a ""great financial opportunity."" Do you invest?",No,Yes,-10,0,0,0,10,0,-100,1000
+Unexpected,You recently inherited a sum of money. Where do you want to put the money?,Cash,Savings,10,0,150,0,10,0,0,1500
+Unexpected,Your refridgerator broke and all your food went bad. Stinky! Where are you getting the money to replace it?,Cash,Savings,-10,-10,-100,0,-10,-10,0,-1000
+Unexpected,Your pet gets pretty sick and needs to see a Vet immediately. Vet bills typically cost. Do you take your pet for help?,No,Yes,-25,0,0,0,15,0,-500,0
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost $250 to fix. Where are you taking the money from?,Cash,Savings,-10,0,-250,0,-10,0,0,-2500
+Unexpected,You did your taxes and just got a refund! Where do you put the money?,Cash,Savings,10,0,250,0,10,0,0,2500
+Unexpected,You won a small lottery prize from a scratch off lottery ticket. Where do you want to put the money?,Cash,Savings,10,0,100,0,10,0,0,1000
+Unexpected,Pest problem! Your home has some unwanted guests and you need to pay for a removal service. Where are you getting the money?,Cash,Savings,-10,-10,-100,0,-10,-10,0,-1000
+Unexpected,You found some cash on the street. Feel free to treat yourself!,Happiness,Health,10,-10,0,0,-10,10,0,0
+Travel,Do you enjoy traveling?,No,Yes,0,0,0,0,0,0,0,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-10,0,150,0,10,0,-150,0
+Travel,Your best friend is doing a destination wedding and you are invited. It's a little expensive but you want to be there for your best friend's special day. Do you go?,No,Yes,-10,0,150,0,10,0,-150,0
+Travel,Your job offers you extra money to go on a business trip! Where do you put the bonus money?,Cash,Savings,0,0,200,0,0,0,0,2000
+Travel,Your friends are planning a big getaway trip. You're always wanted to go to this place! You'll need to plan for travel lodging and food expenses for at least a week. Do you want to go?,No,Yes,-10,0,300,0,10,0,-300,0
+Travel,There is a big life event and you need to travel home to be with family. Where do you want get the money?,Cash,Savings,0,0,-250,0,0,0,0,-2500
+Travel,You've been working hard and saved up vacation time. Do you want to go on a trip or do a staycation? The first will give you extra happiness but take money. The second will give you extra health.,Trip,Staycation,20,0,-200,0,0,20,200,0
+Travel,You entered into a raffle and won a free getaway! Do you want this bonus in your happiness or health?,Happiness,Health,10,-10,0,0,-10,10,0,0
+Travel,You got married! Do you want to go on a honeymoon?,No,Yes,-20,0,200,1000,20,0,-200,-1000
+Travel,Your health or happiness are running a bit low. Would you like to spend some money to take a personal trip?,No,Yes,-10,-10,250,0,10,10,-250,0
+Education,Are you interested in attending a four year college?,No,Yes,0,0,0,0,0,0,0,0
+Education,You've just graduated and you are ready for your next step. Do you take a gap year to restore your energy before moving forward?,No,Yes,0,-10,100,1000,0,10,-100,-1000
+Education,You are working towards a big promotion at work but your boss says that you need take a class to earn a credential in order to qualify. You'll have to pay out of pocket. Do you enroll in the course?,No,Yes,0,0,150,-1500,0,0,-150,1500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,0,10,-200,-1000,0,-10,200,1000
+Education,You've always wanted to try and learn a fun new skill and they are offering classes in your neighborhood. It sounds really fun. Do you sign up?,No,Yes,-10,0,100,0,10,0,-100,0
+Education,Are you interested in earning a graduate degree or higher?,No,Yes,0,0,250,-2500,0,0,-250,2500
+Education,Are you planning on attending school full-time or part-time while working?,Full Time,Part Time,0,0,-250,1000,0,0,250,-1000
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost a bit.,Save money,Treat Yo Self!,-10,0,100,0,10,0,-100,0
+Happiness,Do you want to spend some extra cash to subscribe to your favorite entertainment streaming service for a happiness boost?,Save money,Treat Yo Self!,-10,0,100,0,10,0,-100,0
+Happiness,Your job offers wellness incentives! Enjoy a relaxing massage and replenish either your happiness or health.,Happiness,Health,15,-15,0,0,-15,15,0,0
+Happiness,You have some personal time and get to connect to the things that bring you joy! Happiness or health boost?,Happiness,Health,15,-15,0,0,-15,15,0,0
+Happiness,You've been working hard recently. You deserve some rest. Choose between a happiness or health bonus.,Happiness,Health,15,-15,0,0,-15,15,0,0
+Happiness,You're thinking about adopting a pet! It will give your happiness a boost but take some money. Do you want a pet?,No,Yes,-10,0,250,0,10,0,-250,0
+Happiness,You've been spending a lot of time with friends and feeling a sense of community. Take a happiness or health bonus.,Happiness,Health,10,0,0,0,0,10,0,0
+Happiness,You're scheduling in some personal time for yourself every week. Take a happiness or health bonus.,Happiness,Health,10,0,0,0,0,10,0,0
+Investment,Investment Break! Are you interested in setting up a retirement plan?,No,Yes,0,0,0,0,0,0,-100,5000
+Investment,Investment Break! 401(k)s are retirement plans made through your employer and deduct from your paycheck. IRAs or Individual Retirement Accounts are controlled by the individual (you!). Each plan has its pros and cons. Which sounds more interesting to you?,401(k),IRA,0,0,0,0,0,0,-100,0
+Investment,Investment Break! The difference between a Roth IRA and a Traditional IRA is TAXES and when you pay them. Traditional IRAs give you benefits in the short term while Roth IRAs have benefits in the longrun. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! With a Traditional IRA when you make contributions in the account it’ll lower your tax bill for the year. Chi-ching! BUT when you finally retire you won’t just be taxed on the amount you put in but also however much your account GREW. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! With a Roth IRA you’ll have to contribute and you won’t get a tax deduction every year. But the money you put in will be tax free. That means that when you take it out when you retire everything you saved and however much it grew is ALL YOURS! Ch-ching! We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! Traditional IRAs and Roths IRAs also have different time requirements. When you have a Traditional IRA the government makes you start to withdraw when you turn 72. Roth IRAs have no time requirement so it's up to you to decide what you do with your investment. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! Don't forget-10-10an IRA needs your help to grow. When you put money in you need to choose how to invest it! (stocks bonds mutual funds or other investments) Unlike a savings account the money in an IRA is not meant to just sit there earning interest but to GROW over time. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! Because 401(k)s are made through your job some employers offer to match your contributions. IRAs are individual so do not offer contribution matching. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! 401(k)s typically only offer a limited number of investment options whereas IRAs have more freedom with how you want to invest your money. But remember with IRAs you have to do the work to make investment choices yourself! We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! Now that you know a bit more about types of retirement plans which type of plan do you what to consider?,401(k),IRA,0,0,100,0,0,0,-100,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Happiness,You're having a pretty rough day. You could treat yourself to something small you enjoy but it'll cost [_].,Save money,Treat Yo Self!,-10,0,10,0,10,0,-10,0
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Unexpected,Your car completely breaks down and you don't know how to fix it. It is going to cost [_] to fix. Where are you taking the money from?,Cash,Savings,-15,0,-500,0,-15,0,0,-500
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Work,You get asked to work a few weekends at your job. You'll make a little extra money but will be a little sad. What do you want to do?,Extra Happy,Extra Cash,15.00,0.00,0.00,0.00,-15.00,0.00,150.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Health,Hunger Hits! You can grab something fast that is cheap or something healthy that is a bit more expensive.,Fast Food,Healthy Meal,0.00,-10.00,0.00,0.00,0.00,10.00,-50.00,0.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Work,You've been working so hard lately you get a bonus at work! Do you want to treat yourself to something special or put it in your savings?,Treat Yo Self!,Invest!,10.00,0.00,100.00,0.00,0.00,0.00,0.00,1500.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Social,Your friends are going out somewhere fun tonight but you have to pay to get in. Do you go?,Stay In,Go,-10.00,0.00,0.00,0.00,10.00,0.00,-100.00,0.00
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0,800
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0.00,800
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0.00,800
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0,800
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0.00,800
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0.00,800
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0,800
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0.00,800
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0.00,800
+Housing,You received a tax refund. Do you want to treat yourself to boost your happiness or put extra cash in your savings?,Treat Yo Self!,Invest,15,0,0,-200,-15,0,0,800
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Education,Your job is offering an extra training course FOR FREE. You'll be more qualified for higher paying jobs but will need to work harder in the short run.,Decline,Take the Course,10,20,-100,-100,-10,-20,100,500
+Investment,Investment Break! 401(k)s are retirement plans made through your employer and deduct from your paycheck. IRAs or Individual Retirement Accounts are controlled by the individual (you!). Each plan has its pros and cons. Which sounds more interesting to you?,401(k),IRA,0,0,0,0,0,0,-100,0
+Investment,Investment Break! The difference between a Roth IRA and a Traditional IRA is TAXES and when you pay them. Traditional IRAs give you benefits in the short term while Roth IRAs have benefits in the longrun. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! With a Traditional IRA when you make contributions in the account it’ll lower your tax bill for the year. Chi-ching! BUT when you finally retire you won’t just be taxed on the amount you put in but also however much your account GREW. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! With a Roth IRA you’ll have to contribute and you won’t get a tax deduction every year. But the money you put in will be tax free. That means that when you take it out when you retire everything you saved and however much it grew is ALL YOURS! Ch-ching! We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! Traditional IRAs and Roths IRAs also have different time requirements. When you have a Traditional IRA the government makes you start to withdraw when you turn 72. Roth IRAs have no time requirement so it's up to you to decide what you do with your investment. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! Don't forget-10-10an IRA needs your help to grow. When you put money in you need to choose how to invest it! (stocks bonds mutual funds or other investments) Unlike a savings account the money in an IRA is not meant to just sit there earning interest but to GROW over time. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! Because 401(k)s are made through your job some employers offer to match your contributions. IRAs are individual so do not offer contribution matching. We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Investment,Investment Break! 401(k)s typically only offer a limited number of investment options whereas IRAs have more freedom with how you want to invest your money. But remember with IRAs you have to do the work to make investment choices yourself! We'll keep learning but first do you want to invest some of your money?,No.,Invest!,0,0,100,-10,0,0,-100,5000
+Happiness,You've been working hard recently. You deserve some rest. Choose between a happiness or health bonus.,Happiness,Health,10,-10,0,0,-10,10,0,0
+Happiness,You've been working hard recently. You deserve some rest. Choose between a happiness or health bonus.,Happiness,Health,10,-10,0,0,-10,10,0,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
+Travel,Your loved ones live far away and you haven't visited in a while. Do you take a trip to see them?,No,Yes,-20,0,500,0,20,0,-500,0
