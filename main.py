@@ -10,23 +10,24 @@ global cash, health, happiness, age, retirementAge, savings, savingsGoal, morgag
 cash = 1000
 health = 100
 happiness = 100
+lives = 2 #invisible to player
 
 age = 25
 retirementAge = 65
 savings = 0
-savingsGoal = 100
+savingsGoal = 100000
 
 morgage = False
 car = False
 student_loan = False
 credit_card = False
 married = False
+dating = False
 
-rent_cost = 0
+rent_cost = 750
 morgage_cost = 0
-car_cost = 0
-student_loan_cost = 0
-credit_card_cost = 0
+income = 1000
+retirementPlanAmount = 150
 
 num_kids = 0
 #----------------- Functions -------------------
@@ -39,6 +40,27 @@ def resizeImage(file, width, height):
 
 from random import randint
 def draw():
+  #check if cash, happiness, or health is 0
+  global cash, health, happiness, age, retirementAge, savings, savingsGoal, morgage, car, student_loan, credit_card, married, rent_cost, morgage_cost, car_cost, student_loan_cost, credit_card_cost, num_kids
+  if cash <= 0:
+    if savings < 2500:
+      endGame() #with a loss
+    else:
+      cash = 250
+      savings -= 2500
+  if (happiness <= 0) or (health <= 0):
+    if lives > 0:
+      lives -= 1
+      happiness = 50
+      #TODO: pop up window with message
+    else:
+      endGame() #with a loss
+  if age >= retirementAge:
+    if savings >= savingsGoal:
+      winGame() #with a win
+    else:
+      endGame() #with a loss
+
   global playerDeck
   playerDeck.shuffle()
   card = playerDeck.drawCard()
@@ -56,6 +78,9 @@ def startGame():
 def endGame():
   pass
 
+def winGame():
+  pass
+
 global currentCard
 def updateCard():
   global window, cardText, cardImage, cardImageLabel, currentCard, leftText, rightText
@@ -64,7 +89,7 @@ def updateCard():
   leftText.configure(text=currentCard.leftText)
   rightText.configure(text=currentCard.rightText)
   cardImage = resizeImage(currentCard.image, 320, 270)
-  cardImageLabel = Label(window, image=cardImage, bg='#565040')
+  cardImageLabel = Label(window, image=cardImage, bg='#eee1b5')
   cardImageLabel.place(x=450, y=225)
 
 def applyCard(card, side):
@@ -92,6 +117,7 @@ def applyCard(card, side):
   healthBar.configure(value=health)
   savingsGoalBar.configure(value=savings)
   savingsGoalBar.configure(maximum=savingsGoal)
+  savingsLabel.configure(text="$" + str(savings))
   
 def nextYear():
   global age, ageBar, ageLabel, ageNumberLabel, bear, bearButton
@@ -105,26 +131,28 @@ def nextYear():
     ageBar.configure(maximum=retirementAge)
 
   #TODO: Passive Income and Passive Debts?
-
+  cash += (income - rent_cost - retirementPlanAmount)
 
   #TODO: Passive Savings deposit from income?
+  savings *= 1.075
+  savings += retirementPlanAmount
 
 
   #Update Bear
   satisfaction = (happiness + health) / 2
 
   if satisfaction >= 95:
-    bear = resizeImage("assets/bear_thriving_150X150.png", 125, 125)
+    bear = resizeImage("assets/bear/bear_thriving_250X150-01.png", 200, 150)
   elif satisfaction >= 80:
-    bear = resizeImage("assets/bear_happy_150X150.png", 125, 125)
+    bear = resizeImage("assets/bear/bear_happy_250X150-01.png", 200, 150)
   elif satisfaction >= 65:
-    bear = resizeImage("assets/bear_comfortable_150X150.png", 125, 125)
+    bear = resizeImage("assets/bear/bear_neutral_250X150-01.png", 200, 150)
   elif satisfaction >= 50:
-    bear = resizeImage("assets/bear_neutral_150X150.png", 125, 125)
+    bear = resizeImage("assets/bear/bear_sad_250X150-01.png", 200, 150)
   elif satisfaction >= 35:
-    bear = resizeImage("assets/bear_warning_150X150.png", 125, 125)
+    bear = resizeImage("assets/bear/bear_warning_250X150-01.png", 200, 150)
   else:
-    bear = resizeImage("assets/bear_warning_150X150.png", 125, 125)
+    bear = resizeImage("assets/bear/bear_warning_250X150-01.png", 200, 150)
 
   bearButton.configure(image=bear)           
     
@@ -148,12 +176,12 @@ window.geometry('1200x900')
 #window.wm_attributes('-transparentcolor','grey')
 
 #--------------- Header Bar ---------------------
-headerImage = resizeImage('assets/header_1200X150.png', 1200, 150)
+headerImage = resizeImage('assets/static_elements/header_1200X150.png', 1200, 150)
 lbl = Label(window, text="", image=headerImage)
 lbl.place(x=0, y=0)
 
 global bear, bearButton, cashLabel, cashButton, happinessLabel, happinessBar, healthLabel, healthBar, ageLabel, ageBar, savingsLabel, savingsBar, savingsGoalLabel, savingsGoalBar
-bear = resizeImage("assets/bear_happy_150X150.png", 125, 125)
+bear = resizeImage("assets/bear/bear_happy_250X150-01.png", 200, 150)
 bearButton = Button(window, image=bear, command=updateCard)
 bearButton.place(x=550, y=10)
 
@@ -210,24 +238,25 @@ ttk.Separator(window, orient=HORIZONTAL).place(x=0, y=150, width=1200)
 
 #------------- Game Space -----------------------
 #Background
-backgroundImage = resizeImage('assets/background_1200X750.png', 1200, 750)
+backgroundImage = resizeImage('assets/static_elements/background_1200X700.png', 1200, 750)
 backgroundLabel = Label(window, image=backgroundImage)
 backgroundLabel.place(x=0, y=150)
 
 #Card Outline
-img = resizeImage('assets/blankCard.png',385, 560)
-cardOutlineLabel = Label(window, image=img, bg='#565040')
-cardOutlineLabel.place(x=425, y=200)
+global cardCategory, cardCategoryLabel
+cardCategory = resizeImage('assets/card_categories/card_default.png',385, 560)
+cardCategoryLabel = Label(window, image=cardCategory, bg='#eee1b5')
+cardCategoryLabel.place(x=425, y=200)
 
 #Card Image
 global cardImage, cardImageLabel
-cardImage = resizeImage('assets/cardImages/defaultCardImage.png', 320, 270)
-cardImageLabel = Label(window, image=cardImage, bg='#565040')
+cardImage = resizeImage('assets/card_images/default.png', 320, 270)
+cardImageLabel = Label(window, image=cardImage, bg='#eee1b5')
 cardImageLabel.place(x=450, y=225)
 
 #Card Text
 global cardText
-cardText = Label(window, text="This is the card text", bg='#565040', fg='white', font=("Arial", 12), wraplength=300, justify=CENTER)
+cardText = Label(window, text="This is the card text", bg='#eee1b5', fg='white', font=("Arial", 12), wraplength=300, justify=CENTER)
 cardText.place(x=470, y=500)
 
 #Left Text
@@ -242,13 +271,13 @@ rightText.place(x=900, y=425)
 
 #Card Left Button
 global cardLeftButton
-leftButton = resizeImage('assets/leftButton.png', 79, 79)
+leftButton = resizeImage('assets/static_elements/leftButton_300X100.png', 300, 100)
 cardLeftButton = Button(window, command=clickedLeft, bg='#565040', fg='white', image=leftButton)
 cardLeftButton.place(x=250, y=450)
 
 #Card Right Button
 global cardRightButton
-rightButton = resizeImage('assets/rightButton.png', 79, 79)
+rightButton = resizeImage('assets/static_elements/rightButton_300X100.png', 300, 100)
 cardRightButton = Button(window, command=clickedRight, bg='#565040', fg='white', image=rightButton)
 cardRightButton.place(x=900, y=450)
 

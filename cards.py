@@ -1,7 +1,13 @@
 import random
 global playerDeck
 
-def getImageByCategory(category):
+def getCardImage(lineNum):
+    if lineNum <= 100:
+        return f"assets/card_images/{lineNum}.png"
+    else:
+        return f"assets/card_images/{lineNum-100}.png"
+
+def getCategoryImage(category):
     if category == "Work":
         return "assets/cardImages/newJob.png"
     elif category == "Education":
@@ -36,11 +42,13 @@ def getImageByCategory(category):
     
 class Card:
     def __init__(self, cardCategory, cardDescription, leftText = "Left", rightText = "Right", 
-                 cardImage = "assets\cardImages\defaultCardImage.png",
+                 categoryImage = "assets\card_categories\card_default.png",
+                 cardImage = "assets\card_images\default.png",
                  leftHappiness=0, leftHealth=0,leftCost=0,leftSavings=0, 
                  rightHappiness=0, rightHealth=0, rightCost=0, rightSavings=0):
         
         self.image = cardImage
+        self.outline = categoryImage
         self.description = cardDescription
         self.category = cardCategory
         self.leftCost = leftCost
@@ -82,15 +90,18 @@ class Deck:
         global playerDeck
         with open(pathToCSV) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
-            line_count = 0
+            line_num = 0
             for row in csv_reader:
-                if line_count != 0:
+                if line_num != 0:
                     #cleaning up the data
                     row[1] = ''.join([i for i in row[1] if (i.isalnum() or i == ' ' or i == '.'or i=='!' or i=='?')])
                     #Create and add card
-                    card = Card(row[0], row[1], row[2], row[3], getImageByCategory(row[0]), float(row[4]), float(row[5]), float(row[6]), float(row[7]), float(row[8]), float(row[9]), float(row[10]), float(row[11]))
-                    playerDeck.addCard(card)
-                line_count += 1
+                    try:
+                        card = Card(row[0], row[1], row[2], row[3], getCategoryImage(row[0]), getCardImage(line_num), float(row[4]), float(row[5]), float(row[6]), float(row[7]), float(row[8]), float(row[9]), float(row[10]), float(row[11]))
+                        playerDeck.addCard(card)
+                    except:
+                        print(f'Error: {row}')
+                line_num += 1
 
                 #  For Debuging Decks:
                 #print(f'Card #{line_count}: {row[0]} {row[1]} {row[2]} {row[3]} {row[4]} {row[5]} {row[6]} {row[7]} {row[8]} {row[9]} {row[10]} {row[11]}')

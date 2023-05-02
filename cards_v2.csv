@@ -47,7 +47,7 @@ Relationship,Are you interested in cohabitation with romantic partner(s)?,No,Yes
 Relationship,You have been seeing someone for a while now and they ask you to move in with them. This could be a happiness boost and let you split living expenses. Do you move in together?,No,Yes,0,0,-10,0,10,0,10,0
 Relationship,Are you interested in marriage?,No,Yes,0,0,10,0,0,0,10,0
 Relationship,Are you interested in raising children?,No,Yes,0,10,250,2500,20,-10,-250,-2500
-Relationship,You are interested in getting married. Would you prefer to host a ceremony and reception or elope?,Elope,Ceremony,-25,0,0,2000,25,0,-500,
+Relationship,You are interested in getting married. Would you prefer to host a ceremony and reception or elope?,Elope,Ceremony,-25,0,0,2000,25,0,-500,-2000
 Relationship,You've gotten married and it is time to file your taxes. Do you file together or separately?,Separate,Together,0,0,150,0,0,0,0,1500
 Unexpected,You get a flat tire. Do you pay to have your tire changed or do you try and fix it yourself?,Pay,Change it Self,10,0,-100,0,-15,-10,0,0
 Unexpected,"Someone you went to high school with reaches out to you with a ""great financial opportunity."" Do you invest?",No,Yes,-10,0,0,0,10,0,-100,1000
