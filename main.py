@@ -4,6 +4,7 @@ from tkinter import ttk
 from tkinter import messagebox
 from PIL import Image, ImageTk
 from cards import Card, Deck, playerDeck
+import pygame
 
 #----------------- Variables -------------------
 global cash, health, happiness, age, retirementAge, savings, savingsGoal, lives
@@ -34,6 +35,9 @@ retirementPlanAmount = 150
 
 num_kids = 0
 #----------------- Functions -------------------
+def playCardSound():
+    pygame.mixer.music.load("1.mp3")
+    pygame.mixer.music.play(loops=0)
 
 def resizeImage(file, width, height):
   image = Image.open(file)
@@ -43,6 +47,7 @@ def resizeImage(file, width, height):
 
 from random import randint
 def draw():
+  playCardSound()
   #check if cash, happiness, or health is 0
   global cash, health, happiness, age, retirementAge, savings, savingsGoal
   global morgage, car, student_loan, credit_card, married, rent_cost, morgage_cost
@@ -183,6 +188,7 @@ def clickedRight():
 
 #----------------- Window -------------------
 global window
+pygame.mixer.init()
 window = Tk()
 window.title("Money Honeys")
 window.geometry('1200x800')
@@ -317,5 +323,5 @@ window.mainloop()
 if __name__ == "__main__":
   deck = playerDeck
   card = deck.drawCard()
-  
+  pygame.mixer.init()
   window.mainloop()

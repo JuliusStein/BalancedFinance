@@ -4,8 +4,26 @@ global playerDeck
 def getCardImage(lineNum):
     if lineNum <= 100:
         return f"assets/card_images/{lineNum}.png"
+    elif lineNum <= 110:
+        return f"assets/card_images/83.png"
+    elif lineNum <= 120:
+        return f"assets/card_images/57.png"
+    elif lineNum <= 130:
+        return f"assets/card_images/7.png"
+    elif lineNum <= 140:
+        return f"assets/card_images/12.png"
+    elif lineNum <= 150:
+        return f"assets/card_images/4.png"
+    elif lineNum <= 160:
+        return f"assets/card_images/22.png"
+    elif lineNum <= 170:
+        return f"assets/card_images/39.png"
+    elif lineNum <= 180:
+        return f"assets/card_images/77.png"
+    elif lineNum <= 190:
+        return f"assets/card_images/92.png"
     else:
-        return f"assets/card_images/{lineNum-100}.png"
+        return f"assets/card_images/63.png"
 
 def getCategoryImage(category):
     if category == "Work":
