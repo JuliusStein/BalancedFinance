@@ -9,36 +9,36 @@ def getCardImage(lineNum):
 
 def getCategoryImage(category):
     if category == "Work":
-        return "assets/cardImages/newJob.png"
+        return "assets/card_categories/card_work_450X710-01.png"
     elif category == "Education":
         #return "assets/cardImages/education.png"
-        return "assets/cardImages/defaultCardImage.png"
+        return "assets/card_categories/card_education_450X710-01.png"
     elif category == "Happiness":
-        return "assets/cardImages/raise.png"
+        return "assets/card_categories/card_happiness_450X710-01.png"
         #return "assets/cardImages/defaultCardImage.png"
     elif category == "Health":
         #return "assets/cardImages/health.png"
-        return "assets/cardImages/defaultCardImage.png"
+        return "assets/card_categories/card_health_450X710-01.png"
     elif category == "Travel":
         #return "assets/cardImages/travel.png"
-        return "assets/cardImages/defaultCardImage.png"
+        return "assets/card_categories/card_travel_450X710-01.png"
     elif category == "Investment":
-        return "assets/cardImages/spendOrInvest.png"
+        return "assets/card_categories/card_investment_450X710-01.png"
         #return "assets/cardImages/defaultCardImage.png"
     elif category == "Social":
-        return "assets/cardImages/joinOrNo.png"
+        return "assets/card_categories/card_social_450X710-01.png"
         #return "assets/cardImages/defaultCardImage.png"
     elif category == "Housing":
-        return "assets/cardImages/newJob.png"
+        return "assets/card_categories/card_housing_450X710-01.png"
         #return "assets/cardImages/defaultCardImage.png"
     elif category == "Unexpected":
-        return "assets/cardImages/payCut.png"
+        return "assets/card_categories/card_unexpected_450X710-01.png"
         #return "assets/cardImages/defaultCardImage.png"
     elif category == "Relationship":
         #return "assets/cardImages/relationship.png"
-        return "assets/cardImages/defaultCardImage.png"
+        return "assets/card_categories/card_relationship_450X710-01.png"
     else:
-        return "assets/cardImages/defaultCardImage.png"
+        return "assets/card_categories/card_default.png"
     
 class Card:
     def __init__(self, cardCategory, cardDescription, leftText = "Left", rightText = "Right", 
