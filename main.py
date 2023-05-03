@@ -14,7 +14,7 @@ global student_loan_cost, credit_card_cost, num_kids, income, retirementPlanAmou
 cash = 1000
 health = 100
 happiness = 100
-lives = 2 #invisible to player
+lives = 1 #invisible to player
 
 age = 18
 retirementAge = 65
@@ -34,10 +34,18 @@ income = 1000
 retirementPlanAmount = 150
 
 num_kids = 0
+#----------------- Window -------------------
+global window
+pygame.mixer.init()
+pygame.mixer.Channel(0).play(pygame.mixer.Sound('assets/sounds/background.mp3'))
+
+window = Tk()
+window.title("Money Honeys")
+window.geometry('1200x800')
+
 #----------------- Functions -------------------
 def playCardSound():
-    pygame.mixer.music.load("1.mp3")
-    pygame.mixer.music.play(loops=0)
+    pygame.mixer.Channel(1).play(pygame.mixer.Sound('assets/sounds/card.mp3'))
 
 def resizeImage(file, width, height):
   image = Image.open(file)
@@ -62,9 +70,12 @@ def draw():
     if lives > 0:
       lives -= 1
       happiness = 50
-      #TODO: pop up window with message
+      health = 50
+      keepGoing()
     else:
       endGame() #with a loss
+  if savings >= savingsGoal:
+    winGame()
   if age >= retirementAge:
     if savings >= savingsGoal:
       winGame() #with a win
@@ -77,19 +88,41 @@ def draw():
   return card
 
 def homeScreen():
-  pass
+  global window
+  top = Toplevel(window)
+  top.geometry("750x250")
+  top.title("Child Window")
+  Label(top, text= "Hello World!", font=('Mistral 18 bold')).place(x=150,y=80)
 
 def survey():
+  #cash = tkSimpleDialog.askstring("Cash", "How much cash do you want to start with?")
   pass
 
-def restartGame():
-  pass
+def keepGoing():
+  global window
+  top = Toplevel(window)
+  top.geometry("500x250")
+  top.title("Keep going!")
+  Label(top, text= "You're not doing so well - have a boost on the house", font=('Mistral 18 bold'), foreground="blue").place(x=50,y=70)
+
 
 def endGame():
-  pass
+  global window
+  top = Toplevel(window)
+  top.geometry("500x250")
+  top.title("Try Again")
+  Label(top, text= "You didn't hit your goal :(", font=('Mistral 18 bold'), foreground='red').place(x=150,y=70)
+  window.destroy()
+
 
 def winGame():
-  pass
+  global window
+  top = Toplevel(window)
+  top.geometry("500x250")
+  top.title("Winner")
+  Label(top, text= "!! You Did It !!", font=('Mistral 18 bold'), foreground='green').place(x=150,y=70)
+  window.destroy()
+
 
 global currentCard
 def updateCard():
@@ -186,12 +219,7 @@ def clickedRight():
   applyCard(currentCard, "RIGHT")
   nextYear()
 
-#----------------- Window -------------------
-global window
-pygame.mixer.init()
-window = Tk()
-window.title("Money Honeys")
-window.geometry('1200x800')
+
 #window.wm_attributes('-transparentcolor','grey')
 
 #--------------- Header Bar ---------------------
@@ -303,14 +331,12 @@ global rightText
 rightText = Label(window, text="Right", bg='#eee1b5', fg='black', font=("Arial Bold", 16),width=15, justify=CENTER)
 rightText.place(x=910, y=440)
 
-#------------------------------------
-
-#cardText.configure(text="This is the card text "*30)
+#---------------- MAIN --------------------
 
 global deck
 deck = playerDeck
 
-homeScreen()
+#homeScreen()
 survey()
 
 draw()
@@ -318,10 +344,9 @@ updateCard()
 
 window.mainloop()
 
-
-
-if __name__ == "__main__":
-  deck = playerDeck
-  card = deck.drawCard()
-  pygame.mixer.init()
-  window.mainloop()
+# if __name__ == "__main__":
+#   deck = playerDeck
+#   card = deck.drawCard()
+#   pygame.mixer.init()
+#   pygame.mixer.Channel(0).play(pygame.mixer.Sound('assets/sounds/background.mp3'))
+#   window.mainloop()
